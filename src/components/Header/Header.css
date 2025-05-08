@@ -1,0 +1,211 @@
+/* Header.css */
+
+/* ----------------------------------------- Header ----------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 2px;
+    background-image: url("/public/Imagebackground/backgroundsmoke.jpg");
+    color: white;
+    position: relative;
+    flex-wrap: wrap; /* ทำให้ย่อเมื่อหน้าจอเล็ก */
+  }
+  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ปรับระยะห่างระหว่างโลโก้กับข้อความ */
+    flex-wrap: wrap; /* ให้ข้อความขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+  }
+  
+  .header-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f39c12;
+    white-space: nowrap; /* ป้องกันตัดบรรทัด */
+  }
+  
+  /* ✅ แก้ปัญหาข้อความทับ search bar */
+  @media screen and (max-width: 768px) {
+    .logo {
+      /* flex-direction: column; ให้ข้อความอยู่ใต้โลโก้แทน */
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-logo-text {
+      font-size: 18px; /* ลดขนาดฟอนต์ */
+    }
+
+    .button-login img {
+      width: 35px;
+      height: 35px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .nav{
+      align-items: center;
+      text-align: center;
+
+      }
+    }
+  
+
+/* ----------------------------------------- About ----------------------------------- */
+  
+
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;  /* จัดเมนูเป็นแนวนอน */
+    gap: 20px;  /* เพิ่มระยะห่างระหว่างแต่ละรายการ */
+  }
+  
+  .nav li {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .nav a:hover {
+    color: #f39c12; /* เปลี่ยนเป็นสีที่ต้องการ */
+  }
+  
+  .headerlogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    
+
+  }
+
+/* ----------------------------------------- Search ----------------------------------- */
+
+  .search-container {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 40px 8px 15px; /* เผื่อที่ด้านขวาให้แว่นขยาย */
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px; /* ชิดขวาของ search bar */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* ปรับขนาดไอคอน */
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* ✅ ปรับขนาด search bar ให้เหมาะกับจอเล็ก */
+  @media screen and (max-width: 768px) {
+    .search-container {
+      width: 80%; /* ทำให้กว้างขึ้นบนหน้าจอเล็ก */
+    }
+  
+    .search-icon {
+      width: 18px; /* ลดขนาดไอคอน */
+      height: 18px;
+    }
+  }
+
+
+/* ----------------------------------------- Login ----------------------------------- */
+
+  .login{
+    margin-left: 10px;
+  }
+
+
+  .button-login{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* ✅ แก้ไขให้ Tooltip ซ่อนอยู่ตามปกติ */
+  .tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 125%; /* ให้แสดงขึ้นด้านบน */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* ✅ แสดง Tooltip เมื่อ Hover เท่านั้น */
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .button-login img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+    
+
+  @media screen and (max-width: 769px) {
+    .search-container{
+      width: 80px;
+    }
+
+    
+  }
+
+
+  .button-logout {
+    background-color: #ff4d4d; /* สีแดง */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .button-logout:hover {
+    background-color: #ff1a1a;
+  }
+  
+  

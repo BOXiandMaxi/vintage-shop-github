@@ -1,0 +1,15 @@
+.slidermini-container {
+  width: 90%; /* ให้สไลด์กว้าง 90% ของหน้าจอ */
+  max-width: 1200px; /* ไม่ให้เกิน 1200px */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  margin-top: 20px;
+}
+
+.slidermini-container img {
+  margin-top: 10px;
+  width: 100px;  /* ปรับขนาดรูป */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px; /* ทำให้ขอบโค้ง */
+  
+}

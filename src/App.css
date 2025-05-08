@@ -1,0 +1,62 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+html, body {
+  height: 100%; /* ทำให้ทั้ง html และ body ครอบคลุมหน้าจอทั้งหมด */
+  margin: 0;
+}
+
+body {
+   /* เปลี่ยนสีตามที่ต้องการ */
+  /* background-image: url(/public/Imagebackground/11zon_resized.png); */
+  font-family: Arial, sans-serif; /* ปรับฟอนต์ตามต้องการ */
+  background-image: url(/public/Imagebackground/paper1.jpg);
+  background-size: cover; /* ให้ภาพขยายเต็มหน้าจอ */
+  background-position: center; /* ตั้งค่าภาพให้อยู่กลาง */
+  background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+  background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อนตามการเลื่อนหน้า */
+  margin-left: -50px;
+  max-width: 2500px;
+  
+}
+
+main {
+  min-height: 100vh; /* ให้เนื้อหาหลัก (หรือ section อื่น ๆ) ครอบคลุมหน้าจอ */
+  padding: 20px;
+}

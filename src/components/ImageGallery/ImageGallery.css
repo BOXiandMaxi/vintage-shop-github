@@ -1,0 +1,108 @@
+/* ปรับแต่ง gallery */
+.image-gallery-container {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f39c12;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  display: flex;
+  object-fit: contain;
+  flex-wrap: wrap; /* ทำให้ภาพหลายๆ รูปสามารถขึ้นบรรทัดใหม่ได้ */
+  gap: 10px; /* เพิ่มระยะห่างระหว่างภาพ */
+}
+
+/* ปรับแต่งกล่องที่ล้อมรอบแต่ละรูป */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* ขนาดกล่องที่เหมาะสม */
+  height: 300px; /* ขนาดกล่องที่เหมาะสม */
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: -8px;
+  padding: 10px;
+  overflow: hidden; /* ทำให้ภาพไม่ล้นออกจากขอบกล่อง */
+}
+
+/* ปรับแต่งรูปภาพ */
+.swiper-slide-img {
+  width: 100%; /* กำหนดให้ภาพกว้างเต็มกล่อง */
+  height: 100%; /* กำหนดให้ภาพสูงเต็มกล่อง */
+  object-fit: cover; /* ใช้ cover เพื่อให้ภาพเต็มกล่องโดยไม่ตัดภาพ */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* เมื่อ hover รูปภาพ */
+.swiper-slide-img:hover {
+  transform: scale(1.1);
+}
+
+/* เพิ่มกรอบให้รูปที่ถูกเลือก */
+.swiper-slide-img.selected {
+  border: 3px solid #f39c12;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+
+/* สไตล์สำหรับปุ่ม Next, Prev และ Pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* เมื่อ hover ปุ่ม Next หรือ Prev */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* ปุ่มสำหรับ Pagination */
+.swiper-pagination-bullet {
+  background-color: #333;
+  opacity: 0.7;
+}
+
+/* ปุ่ม Pagination hover */
+.swiper-pagination-bullet-active {
+  background-color: #f39c12;
+  opacity: 1;
+}
+
+/* ทำให้ responsive สำหรับขนาดหน้าจอเล็ก */
+@media (max-width: 768px) {
+  .swiper-slide-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .image-gallery-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+}

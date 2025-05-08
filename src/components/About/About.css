@@ -1,0 +1,59 @@
+.about-container {
+  padding: 50px 20px;
+  font-family: "Georgia", serif;
+  width: 3000;  /* ทำให้กว้างสุดขอบจอ */
+  box-sizing: border-box;  /* ให้รวม padding เข้ากับขนาดรวม */
+  margin: 0; /* ลบช่องว่างด้านนอก */
+  padding-left: 0; /* ลบช่องว่างด้านซ้าย */
+  margin-left: 4px;
+  padding-bottom: calc(100vh - 50px - 100%); /* ทำให้ padding-bottom ลงสุดขอบจอ */
+}
+
+.about-content {
+  max-width: 1500px;
+  width: 1500px;
+  margin-left: 90px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 50px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #7b3e19;
+  margin-bottom: 20px;
+}
+
+.about-description, .about-story, .about-contact {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.highlight {
+  color: #d35400;
+  font-weight: bold;
+}
+
+.about-subtitle {
+  font-size: 1.8rem;
+  color: #7b3e19;
+  margin-top: 30px;
+}
+
+.about-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  font-size: 1.2rem;
+  padding: 8px 0;
+  color: #555;
+}
+
+.about-contact {
+  margin-top: 20px;
+}

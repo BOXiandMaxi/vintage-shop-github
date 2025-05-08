@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Merriweather:wght@300&display=swap');
+
+
+.hero{
+  position: relative;
+  padding: 20px 20px; /* เพิ่มพื้นที่ในส่วนบน */
+  text-align: center;;
+}
+
+.title-head{
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-mini{
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.title-head2{
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-mini2{
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.title-head3{
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-mini3{
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.title-head4{
+  font-family: 'Lobster', cursive;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-mini4{
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.read-more {
+  background-color: transparent;
+  border: none;
+  color: #000000f1;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

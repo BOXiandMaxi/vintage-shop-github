@@ -1,0 +1,80 @@
+
+.featured-products {
+  flex-wrap: wrap;
+  justify-content:  space-evenly;
+  margin-top: 25px;
+  margin-left: 100px;
+  padding: 60px 40px  ; /* เพิ่ม Padding ด้านบนล่าง */
+  padding-right: 100px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f8f8, #e0e0e0); /* เพิ่มไล่สี */
+  border-radius: 20px; /* ทำให้มุมโค้งมน */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* เพิ่มเงาให้นุ่มนวล */
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-products:hover {
+  transform: scale(1.02); /* ขยายเบาๆ เวลาชี้ */
+}
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* จำกัดให้แต่ละแถวมี 3 รูป */
+    gap: 15px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  
+  .product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #e74c3c;
+  }
+
+  @media (max-width: 1024px) {
+    .product-list {
+      grid-template-columns: repeat(2, 1fr); /* บนแท็บเล็ต แสดง 2 รูปต่อแถว */
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(1, 1fr); /* บนมือถือ แสดง 1 รูปต่อแถว */
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  
+  

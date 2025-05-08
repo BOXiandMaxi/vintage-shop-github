@@ -1,0 +1,142 @@
+/* สไตล์หลัก */
+.product-detail-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: aliceblue;
+  margin-left: 700px;
+}
+
+/* ✅ ฟิกซ์ขนาดรูปไว้ */
+.product-image-container {
+  flex: 0 0 600px; /* ไม่ยืด ไม่หด ขนาดคงที่ที่ 600px */
+  background-color: plum;
+  height: 1300px;
+}
+
+/* ✅ ให้ฝั่งข้อความกินพื้นที่ที่เหลือ */
+.product-info {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* ป้องกันเนื้อหาล้น */
+}
+
+
+.product-detail-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-detail-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #f30;
+  font-weight: bold;
+}
+
+.product-detail-main {
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap; /* ทำให้เนื้อหาสามารถขยับไปบรรทัดใหม่ได้ */
+  justify-content: space-between; /* จัดระยะห่างให้เหมาะสม */
+  overflow: hidden; /* ป้องกันการเลื่อนเกินขอบ */
+  background-color: aliceblue;
+}
+
+.product-image-container {
+  display: inline-block;
+  flex: 1;
+  width: 100px; /* กำหนดขนาดขั้นต่ำ */
+  max-width: 700px;
+  background-color: plum;
+  height: 1300px;
+  max-height: 1300px;
+}
+
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* ป้องกันเนื้อหาล้น */
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  
+}
+
+.product-info p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+
+  /* ✅ เพิ่มสองบรรทัดนี้เข้าไป */
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+
+.product-info h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.product-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-info ul li {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-text {
+  text-align: center;
+}
+
+.add-button {
+  padding: 5px 10px;
+  background-color: #f30;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  position: absolute;  /* ใช้ absolute เพื่อให้มันอยู่ด้านล่าง */
+  bottom: 20px; /* ตั้งระยะห่างจากด้านล่าง */
+  left: 50%; /* กำหนดให้มันอยู่ตรงกลาง */
+  transform: translateX(-50%); /* ย้ายจากด้านซ้ายเพื่อให้ตรงกลางพอดี */
+  box-shadow: 6px 4px 7px 2px black;
+  margin-bottom: 300px;  /* กำหนดระยะห่างจากด้านล่าง */
+  margin-left: 110px;
+  
+}
+
+.add-button:hover{
+  cursor: pointer;
+  padding: 3px 8px 3px 8px;
+  font-size: 18px;
+  
+}
+
+
+@media screen and (max-width: 480px) {
+  .product-detail-container {
+    display: block;
+  }
+  
+}

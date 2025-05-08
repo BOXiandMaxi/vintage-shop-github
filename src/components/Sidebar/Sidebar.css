@@ -1,0 +1,104 @@
+/* Sidebar */
+.sidebar {
+  width: 200px; /* ปรับให้กว้างขึ้น */
+  height: 100vh; /* สูงเต็มจอ */
+  background-image: url("/public/Imagebackground/backgroundsmoke.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 70px; /* อยู่ใต้ Header */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1100; /* มากกว่า header */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้ Sidebar */
+}
+
+/* ส่วน Header */
+.header {
+  width: 100%;
+  height: 70px; /* กำหนดความสูงของ header */
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+}
+
+/* ส่วนเนื้อหาหลัก */
+.content {
+  margin-left: 250px; /* ปรับให้ห่างจาก Sidebar */
+  padding: 100px 20px 20px; /* ปรับ padding-top เพื่อไม่ให้ชน Header */
+}
+
+/* ส่วนหัวข้อใน Sidebar */
+.sidebar h2 {
+  color: #f39c12;
+  margin-bottom: 30px;
+  font-size: 22px; /* ขยายขนาดฟอนต์ */
+  text-align: center; /* จัดกึ่งกลาง */
+  text-transform: uppercase; /* ให้เป็นตัวพิมพ์ใหญ่ทั้งหมด */
+  letter-spacing: 2px; /* เพิ่มระยะห่างตัวอักษร */
+}
+
+/* รายการใน Sidebar */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0px; /* เพิ่มระยะห่างระหว่างรายการ */
+  padding: 10px 15px; /* เพิ่ม padding เพื่อให้คลิกได้ง่ายขึ้น */
+  border-radius: 12px; /* ทำมุมโค้ง */
+  background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังบางเบา */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* เอฟเฟกต์เมื่อ hover ที่รายการใน Sidebar */
+.sidebar li:hover {
+  background-color: #f39c12; /* เปลี่ยนสีพื้นหลัง */
+  color: white; /* เปลี่ยนสีตัวอักษร */
+  transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+/* การแสดงผลเมื่อคลิก (active state) */
+.sidebar li.active {
+  background-color: #e67e22; /* สีเมื่อคลิก */
+  color: #fff;
+  transform: scale(1.05); /* ขยายขนาดเล็กน้อย */
+}
+
+/* ลิงก์ใน Sidebar */
+.sidebar a {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+  display: block; /* ทำให้ลิงก์เป็นบล็อกเพื่อให้คลิกได้ทั้งตัว */
+  padding: 10px;
+  border-radius: 8px;
+  transition: color 0.3s, padding-left 0.3s ease;
+}
+
+/* สไตล์เมื่อ hover บนลิงก์ */
+.sidebar a:hover {
+  color: #333; /* เปลี่ยนสีข้อความ */
+  padding-left: 20px; /* เพิ่มระยะห่างทางด้านซ้ายเพื่อสร้างเอฟเฟกต์ */
+}
+
+/* การปรับปรุงลิงก์ที่ถูกเลือก */
+.sidebar a.active {
+  color: #333;
+  background-color: #f39c12; /* เปลี่ยนสีเมื่อคลิก */
+  padding-left: 20px; /* เพิ่มระยะห่างทางด้านซ้าย */
+  border-radius: 8px; /* เพิ่มมุมโค้ง */
+}
