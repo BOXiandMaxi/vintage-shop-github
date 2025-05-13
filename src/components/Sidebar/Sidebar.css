@@ -34,7 +34,7 @@
 
 /* ส่วนเนื้อหาหลัก */
 .content {
-  margin-left: 250px; /* ปรับให้ห่างจาก Sidebar */
+  margin-left: px; /* ปรับให้ห่างจาก Sidebar */
   padding: 100px 20px 20px; /* ปรับ padding-top เพื่อไม่ให้ชน Header */
 }
 
@@ -101,4 +101,61 @@
   background-color: #f39c12; /* เปลี่ยนสีเมื่อคลิก */
   padding-left: 20px; /* เพิ่มระยะห่างทางด้านซ้าย */
   border-radius: 8px; /* เพิ่มมุมโค้ง */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* ปรับให้ Sidebar ขยายเต็มหน้าจอ */
+    height: auto; /* ความสูงอัตโนมัติ */
+    top: 0;
+    left: 0;
+    padding: 15px;
+  }
+
+  .header {
+    height: 60px; /* ลดความสูงของ header บนมือถือ */
+  }
+
+  .content {
+    margin-left: 0; /* ไม่ให้มีช่องว่างจาก Sidebar */
+    padding: 80px 20px 20px; /* ปรับ padding-top */
+  }
+
+  .sidebar h2 {
+    font-size: 18px; /* ลดขนาดฟอนต์หัวข้อ */
+  }
+
+  .sidebar li {
+    padding: 8px 12px; /* ลด padding ของรายการ */
+    font-size: 14px; /* ลดขนาดฟอนต์ของรายการ */
+  }
+
+  .sidebar a {
+    font-size: 14px; /* ลดขนาดฟอนต์ของลิงก์ */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%; /* ทำให้ Sidebar กว้างเต็มหน้าจอ */
+    top: 0;
+  }
+
+  .header {
+    height: 50px; /* ลดความสูง header */
+  }
+
+  .sidebar h2 {
+    font-size: 16px; /* ลดขนาดฟอนต์หัวข้อ */
+  }
+
+  .sidebar li {
+    padding: 6px 10px; /* ลดขนาด padding ของรายการ */
+    font-size: 12px; /* ลดขนาดฟอนต์ */
+  }
+
+  .sidebar a {
+    font-size: 12px; /* ลดขนาดฟอนต์ของลิงก์ */
+  }
 }

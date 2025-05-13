@@ -1,94 +1,56 @@
-/* ปรับแต่ง gallery */
+/* ปรับ container */
 .image-gallery-container {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
-  padding: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 15px;
   background-color: #f39c12;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  display: flex;
-  object-fit: contain;
-  flex-wrap: wrap; /* ทำให้ภาพหลายๆ รูปสามารถขึ้นบรรทัดใหม่ได้ */
-  gap: 10px; /* เพิ่มระยะห่างระหว่างภาพ */
+  width: 100%;  /* เพิ่ม width 100% เพื่อให้ container ยืดเต็มพื้นที่ */
+  box-sizing: border-box; /* คำนวณขนาดรวม padding */
 }
 
-/* ปรับแต่งกล่องที่ล้อมรอบแต่ละรูป */
+/* กล่องรูปแต่ละใบ (ขนาดปรับอัตโนมัติตาม Swiper) */
 .swiper-slide {
+  box-sizing: border-box; /* ✅ แก้ปัญหากล่องขยาย */
+  padding: 10px;
+  width: 100%;  /* ถ้าใช้ auto อย่าเซ็ต width แบบ fixed */
+  height: 260px;  /* ความสูงเริ่มต้น */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px; /* ขนาดกล่องที่เหมาะสม */
-  height: 300px; /* ขนาดกล่องที่เหมาะสม */
   background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: -8px;
-  padding: 10px;
-  overflow: hidden; /* ทำให้ภาพไม่ล้นออกจากขอบกล่อง */
+  overflow: hidden;
 }
 
-/* ปรับแต่งรูปภาพ */
+/* ขนาดภาพ */
 .swiper-slide-img {
-  width: 100%; /* กำหนดให้ภาพกว้างเต็มกล่อง */
-  height: 100%; /* กำหนดให้ภาพสูงเต็มกล่อง */
-  object-fit: cover; /* ใช้ cover เพื่อให้ภาพเต็มกล่องโดยไม่ตัดภาพ */
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* เมื่อ hover รูปภาพ */
 .swiper-slide-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* เพิ่มกรอบให้รูปที่ถูกเลือก */
 .swiper-slide-img.selected {
   border: 3px solid #f39c12;
   box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
 }
 
-
-/* สไตล์สำหรับปุ่ม Next, Prev และ Pagination */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-/* เมื่อ hover ปุ่ม Next หรือ Prev */
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* ปุ่มสำหรับ Pagination */
-.swiper-pagination-bullet {
-  background-color: #333;
-  opacity: 0.7;
-}
-
-/* ปุ่ม Pagination hover */
-.swiper-pagination-bullet-active {
-  background-color: #f39c12;
-  opacity: 1;
-}
-
-/* ทำให้ responsive สำหรับขนาดหน้าจอเล็ก */
+/* รองรับหน้าจอขนาด 768px */
 @media (max-width: 768px) {
-  .swiper-slide-img {
-    width: 100px;
-    height: 100px;
+  .swiper-slide {
+    height: 150px; /* ปรับความสูงของ swiper-slide ให้เหมาะสม */
   }
 
-  .swiper-container {
-    width: 100%;
+  .swiper-slide-img {
+    border-radius: 6px;
   }
 
   .image-gallery-container {
@@ -96,13 +58,13 @@
   }
 }
 
+/* รองรับหน้าจอขนาด 480px */
 @media (max-width: 480px) {
-  .swiper-slide-img {
-    width: 80px;
-    height: 80px;
+  .swiper-slide {
+    height: 120px; /* ปรับความสูงของ swiper-slide ให้เหมาะสม */
   }
 
-  .swiper-container {
-    width: 100%;
+  .swiper-slide-img {
+    border-radius: 5px;
   }
 }

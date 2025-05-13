@@ -194,13 +194,12 @@ const products = {
 function ProductDetail() {
   const { id } = useParams();
   const product = products[id];
+  const [selectedImage, setSelectedImage] = useState(product.image); 
 
-  const [selectedImage, setSelectedImage] = useState(product.image); // เริ่มต้นแสดงภาพหลัก
-  
   if (!product) return <p>Product not found.</p>;
 
   const handleImageClick = (image) => {
-    setSelectedImage(image); // เปลี่ยนภาพหลักเมื่อคลิก
+    setSelectedImage(image);
   };
 
   return (
@@ -212,7 +211,7 @@ function ProductDetail() {
       <div className="product-detail-main">
         <div className="product-image-container">
           <img
-            src={selectedImage} // แสดงภาพที่เลือก
+            src={selectedImage} 
             alt={product.name}
             className="product-detail-image"
           />
@@ -236,13 +235,12 @@ function ProductDetail() {
             ))}
           </ul>
           <p className="price-text">฿{product.price}</p>
-        </div>
-        <div>
+
+          {/* ปุ่ม "ซื้อเลย" ย้ายมาอยู่ใต้ราคา */}
           <button className="add-button">ซื้อเลย</button>
         </div>
       </div>
     </div>
-    
   );
 }
 

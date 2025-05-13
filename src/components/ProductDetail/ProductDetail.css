@@ -1,142 +1,163 @@
-/* สไตล์หลัก */
-.product-detail-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: aliceblue;
-  margin-left: 700px;
-}
-
-/* ✅ ฟิกซ์ขนาดรูปไว้ */
-.product-image-container {
-  flex: 0 0 600px; /* ไม่ยืด ไม่หด ขนาดคงที่ที่ 600px */
-  background-color: plum;
-  height: 1300px;
-}
-
-/* ✅ ให้ฝั่งข้อความกินพื้นที่ที่เหลือ */
-.product-info {
-  flex: 1;
-  margin-left: 20px;
+.product-detail-container {
   display: flex;
   flex-direction: column;
-  min-width: 0; /* ป้องกันเนื้อหาล้น */
-}
-
-
-.product-detail-header {
-  text-align: center;
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product-detail-header h1 {
-  font-size: 2.5rem;
-  color: #333;
-}
-
-.product-price {
-  font-size: 1.5rem;
-  color: #f30;
-  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .product-detail-main {
   display: flex;
-  width: 1200px;
-  flex-wrap: wrap; /* ทำให้เนื้อหาสามารถขยับไปบรรทัดใหม่ได้ */
-  justify-content: space-between; /* จัดระยะห่างให้เหมาะสม */
-  overflow: hidden; /* ป้องกันการเลื่อนเกินขอบ */
-  background-color: aliceblue;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
 }
 
 .product-image-container {
-  display: inline-block;
   flex: 1;
-  width: 100px; /* กำหนดขนาดขั้นต่ำ */
-  max-width: 700px;
-  background-color: plum;
-  height: 1300px;
-  max-height: 1300px;
-}
-
-.product-detail-image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
+  max-width: 600px; /* ปรับให้กล่องภาพใหญ่ขึ้น */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .product-info {
   flex: 1;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  min-width: 0; /* ป้องกันเนื้อหาล้น */
+  max-width: 500px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
 }
 
-.product-info h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  
-}
-
-.product-info p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-
-  /* ✅ เพิ่มสองบรรทัดนี้เข้าไป */
-  word-break: break-word;
-  white-space: pre-wrap;
-}
-
-
-.product-info h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
-
-.product-info ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.product-info ul li {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
+.product-detail-image {
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  max-height: 360px;
+  object-fit: cover;
 }
 
 .add-text {
-  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.price-text {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-top: 10px;
 }
 
 .add-button {
-  padding: 5px 10px;
-  background-color: #f30;
-  font-size: 20px;
-  color: white;
-  border-radius: 10px;
-  position: absolute;  /* ใช้ absolute เพื่อให้มันอยู่ด้านล่าง */
-  bottom: 20px; /* ตั้งระยะห่างจากด้านล่าง */
-  left: 50%; /* กำหนดให้มันอยู่ตรงกลาง */
-  transform: translateX(-50%); /* ย้ายจากด้านซ้ายเพื่อให้ตรงกลางพอดี */
-  box-shadow: 6px 4px 7px 2px black;
-  margin-bottom: 300px;  /* กำหนดระยะห่างจากด้านล่าง */
-  margin-left: 110px;
-  
-}
-
-.add-button:hover{
+  background-color: #e67e22;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 3px 8px 3px 8px;
-  font-size: 18px;
-  
+  margin-top: 20px; /* เพิ่มช่องว่างระหว่างราคาและปุ่ม */
 }
 
+.add-button:hover {
+  background-color: #d35400;
+}
 
-@media screen and (max-width: 480px) {
-  .product-detail-container {
-    display: block;
+.product-info h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.product-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-info li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-detail-header h1 {
+    font-size: 1.5rem;
   }
-  
+
+  .product-detail-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .product-info {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .product-detail-image {
+    width: 80%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .price-text {
+    font-size: 1.2rem;
+  }
+
+  .add-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-detail-image {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .price-text {
+    font-size: 1.1rem;
+  }
+
+  .add-button {
+    font-size: 14px;
+  }
+
+  .product-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .product-info li {
+    font-size: 0.85rem;
+  }
 }

@@ -7,6 +7,7 @@
   overflow: hidden; /* ป้องกันภาพเกินขอบ */
   border-radius: 10px;
   margin-top: 60px;
+  margin-right: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 2), 0 7px 16px rgba(0, 0, 0, 2);
 }
 
@@ -14,4 +15,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* รองรับหน้าจอมือถือ (max-width: 768px) */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%;
+    min-width: 0; /* เอาค่าต่ำสุดออก เพื่อให้ยืดหยุ่น */
+    height: 250px; /* ปรับความสูงให้เหมาะสมกับมือถือ */
+    margin-right: 0; /* เอา margin-right ออก */
+  }
+}
+
+/* รองรับหน้าจอขนาดเล็ก (max-width: 480px) */
+@media (max-width: 480px) {
+  .slider-container {
+    height: 200px; /* ปรับความสูงให้เหมาะสมกับหน้าจอโทรศัพท์ขนาดเล็ก */
+  }
 }

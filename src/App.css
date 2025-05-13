@@ -37,26 +37,61 @@
   }
 } */
 
+/* รีเซ็ตพื้นฐาน */
 html, body {
-  height: 100%; /* ทำให้ทั้ง html และ body ครอบคลุมหน้าจอทั้งหมด */
+  height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-   /* เปลี่ยนสีตามที่ต้องการ */
-  /* background-image: url(/public/Imagebackground/11zon_resized.png); */
-  font-family: Arial, sans-serif; /* ปรับฟอนต์ตามต้องการ */
+  font-family: Arial, sans-serif;
   background-image: url(/public/Imagebackground/paper1.jpg);
-  background-size: cover; /* ให้ภาพขยายเต็มหน้าจอ */
-  background-position: center; /* ตั้งค่าภาพให้อยู่กลาง */
-  background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
-  background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อนตามการเลื่อนหน้า */
-  margin-left: -50px;
-  max-width: 2500px;
-  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 main {
-  min-height: 100vh; /* ให้เนื้อหาหลัก (หรือ section อื่น ๆ) ครอบคลุมหน้าจอ */
-  padding: 20px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  main {
+    padding: 5px;
+  }
 }

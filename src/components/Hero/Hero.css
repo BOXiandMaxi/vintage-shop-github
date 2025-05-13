@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Merriweather:wght@300&display=swap');
 
 
-.hero{
+.hero {
   position: relative;
-  padding: 20px 20px; /* เพิ่มพื้นที่ในส่วนบน */
-  text-align: center;;
+  padding: 20px 20px;
+  text-align: center;
+  margin-left: 250px; /* รักษาตำแหน่งที่ต้องการสำหรับหน้าจอใหญ่ */
 }
 
 .title-head{
@@ -21,55 +22,25 @@
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
-  
 }
 
-.title-head2{
+.title-head2,
+.title-head3,
+.title-head4 {
   font-family: 'Lobster', cursive;
   font-size: 48px;
   font-weight: bold;
 }
 
-.title-mini2{
+.title-mini2,
+.title-mini3,
+.title-mini4 {
   font-family: 'Merriweather', serif;
   font-size: 1.2rem;
   color: #5a5a5a;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
-  
-}
-
-.title-head3{
-  font-family: 'Lobster', cursive;
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.title-mini3{
-  font-family: 'Merriweather', serif;
-  font-size: 1.2rem;
-  color: #5a5a5a;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  
-}
-
-.title-head4{
-  font-family: 'Lobster', cursive;
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.title-mini4{
-  font-family: 'Merriweather', serif;
-  font-size: 1.2rem;
-  color: #5a5a5a;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  
 }
 
 .read-more {
@@ -84,4 +55,38 @@
 .read-more:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* ----------------------------------------- Responsive for mobile ----------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-left: 20px; /* ลด margin-left สำหรับมือถือเพื่อให้ไม่เกินขอบ */
+    padding: 20px 10px;
+    align-items: flex-start; /* ให้ย้ายไปที่ขอบซ้ายสำหรับมือถือ */
+  }
+
+  .title-head {
+    font-size: 2rem; /* ปรับขนาดฟอนต์ */
+  }
+
+  .title-mini {
+    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+  }
+
+  .title-head2,
+  .title-head3,
+  .title-head4 {
+    font-size: 2rem; /* ปรับขนาดฟอนต์ */
+  }
+
+  .title-mini2,
+  .title-mini3,
+  .title-mini4 {
+    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+  }
+
+  .read-more {
+    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+  }
 }

@@ -13,8 +13,8 @@ const ImageGallery = ({ images, onImageClick, selectedImage }) => {
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        spaceBetween={12}  // เพิ่มระยะห่างระหว่างภาพ
-        slidesPerView={3.15}  // ปรับจำนวนภาพที่แสดงต่อหน้า
+        spaceBetween={10}  // เพิ่มระยะห่างระหว่างภาพ
+        slidesPerView={3.20}  // ปรับจำนวนภาพที่แสดงต่อหน้า
         loop={true}
         className="swiper-container"
         breakpoints={{
