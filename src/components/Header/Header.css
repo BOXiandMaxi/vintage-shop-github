@@ -2,15 +2,13 @@
 
 .header {
   display: flex;
-  flex-wrap: wrap; /* ✅ ให้ wrap แต่ไม่หลุด */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-image: url("/public/Imagebackground/backgroundsmoke.jpg");
   color: white;
   position: relative;
-
-  /* ✅ ป้องกันเนื้อหาไหลออก */
   overflow: hidden;
 }
 
@@ -161,52 +159,76 @@
 
 /* ----------------------------------------- Responsive (มือถือ) ----------------------------------- */
 
-@media screen and (max-width: 768px) {
+
+/* รองรับ iPhone 13 */
+@media screen and (max-width: 390px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
+  }
+
   .header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px; /* เพิ่ม padding */
-    overflow: hidden; /* ป้องกันเนื้อหาหลุด */
+    padding: 10px 15px;
+  }
+  
+  .headerlogo{
+    margin-left: -30px;
+    margin-top: 7px;
+    width: 100px;
+    border-radius: 10px;
+    
+  }
+
+  .header-logo-text{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 11px;
+    width: 10px;
   }
 
   .logo {
-    flex-direction: column;
     gap: 5px;
   }
 
-  .header-logo-text {
-    font-size: 18px;
-  }
-
-  .headerlogo {
-    width: auto;
-    justify-content: center;
-  }
-
-  /* ✅ ปรับเมนูให้อยู่ภายใน header */
   .nav {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-right: 0;
+    margin-left: 130px;
+    position: absolute;
+    top: 50px; /* หรือปรับค่าตามที่เหมาะ */
+    z-index: 1; /* ให้ต่ำกว่า login */
+    
   }
 
   .nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;       /* เรียงแนวนอน */
+    flex-wrap: wrap;           /* ให้เมนูขึ้นบรรทัดใหม่เมื่อแคบ */
+    justify-content: center;   /* จัดให้อยู่ตรงกลาง */
     gap: 8px;
   }
 
-  .nav ul li {
-    font-size: 12px;
-    padding: 4px 6px;
+  .nav li {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    white-space: nowrap; /* ป้องกันตัดคำ */
   }
 
   .search-container {
-    width: 90%;
-    margin-top: 10px;
+    width: 20%;
+    display: flex;
+    margin-top: 55px;
+    margin-left: -300px;
+    position: relative;
   }
 
   .search-icon {
@@ -217,10 +239,23 @@
   .button-login img {
     width: 30px;
     height: 30px;
+    
   }
 
   .login {
-    margin-left: 0;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* เรียงแนวตั้ง */
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: -120px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .UserNameEmail {
+    font-size: 14px;
+    margin-top: 45px;
   }
 }

@@ -58,25 +58,31 @@
 }
 
 /* ✅ Responsive สำหรับจอเล็ก */
-@media (max-width: 768px) {
+@media (max-width: 390px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
+  }
   .about-container {
     flex-direction: column;
     padding: 20px 10px;
   }
 
   .about-content {
-    margin-left: 0;
+    max-width: 14%;
+    margin-left: 828px;
     padding: 20px;
     border-radius: 30px;
   }
 
   .about-title {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .about-subtitle {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
@@ -84,7 +90,7 @@
   .about-story,
   .about-contact,
   .about-list li {
-    font-size: 1rem;
+    font-size: 0.6rem;
     text-align: justify;
   }
 }

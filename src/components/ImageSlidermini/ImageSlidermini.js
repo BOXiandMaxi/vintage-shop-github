@@ -12,6 +12,7 @@ const ImageSlidermini = () => {
     slidesToScroll: 1,   // เลื่อนทีละ 1 รูป
     autoplay: true,
     autoplaySpeed: 2000, // เลื่อนอัตโนมัติทุก 2 วิ
+    arrows: false,
   };
 
 

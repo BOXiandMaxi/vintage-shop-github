@@ -60,33 +60,40 @@
 /* ----------------------------------------- Responsive for mobile ----------------------------------- */
 
 @media screen and (max-width: 768px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
+  }
+
   .hero {
-    margin-left: 20px; /* ลด margin-left สำหรับมือถือเพื่อให้ไม่เกินขอบ */
+    max-width: 14%;
+    margin-left: 840px; /* ลด margin-left สำหรับมือถือเพื่อให้ไม่เกินขอบ */
     padding: 20px 10px;
     align-items: flex-start; /* ให้ย้ายไปที่ขอบซ้ายสำหรับมือถือ */
   }
 
   .title-head {
-    font-size: 2rem; /* ปรับขนาดฟอนต์ */
+    font-size: 1rem; /* ปรับขนาดฟอนต์ */
   }
 
   .title-mini {
-    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+    font-size: 0.7rem; /* ปรับขนาดฟอนต์ */
   }
 
   .title-head2,
   .title-head3,
   .title-head4 {
-    font-size: 2rem; /* ปรับขนาดฟอนต์ */
+    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
   }
 
   .title-mini2,
   .title-mini3,
   .title-mini4 {
-    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+    font-size: 0.7rem; /* ปรับขนาดฟอนต์ */
   }
 
   .read-more {
-    font-size: 0.9rem; /* ปรับขนาดฟอนต์ */
+    font-size: 0.7rem; /* ปรับขนาดฟอนต์ */
   }
 }

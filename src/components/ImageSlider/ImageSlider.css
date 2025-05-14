@@ -7,7 +7,7 @@
   overflow: hidden; /* ป้องกันภาพเกินขอบ */
   border-radius: 10px;
   margin-top: 60px;
-  margin-right: 200px;
+  margin-right: 190px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 2), 0 7px 16px rgba(0, 0, 0, 2);
 }
 
@@ -18,18 +18,18 @@
 }
 
 /* รองรับหน้าจอมือถือ (max-width: 768px) */
-@media (max-width: 768px) {
-  .slider-container {
-    width: 100%;
-    min-width: 0; /* เอาค่าต่ำสุดออก เพื่อให้ยืดหยุ่น */
-    height: 250px; /* ปรับความสูงให้เหมาะสมกับมือถือ */
-    margin-right: 0; /* เอา margin-right ออก */
+@media (max-width: 390px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
   }
-}
 
-/* รองรับหน้าจอขนาดเล็ก (max-width: 480px) */
-@media (max-width: 480px) {
   .slider-container {
-    height: 200px; /* ปรับความสูงให้เหมาะสมกับหน้าจอโทรศัพท์ขนาดเล็ก */
+    width: 14%;
+    min-width: 0; /* เอาค่าต่ำสุดออก เพื่อให้ยืดหยุ่น */
+    height: 100px; /* ปรับความสูงให้เหมาะสมกับมือถือ */
+    margin-left: 837px; /* เอา margin-right ออก */
+    margin-top: 30px;
   }
 }

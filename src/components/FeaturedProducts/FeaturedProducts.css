@@ -62,17 +62,36 @@
 }
 
 /* ✅ ล้าง margin-left เฉพาะจอเล็ก */
-@media (max-width: 1024px) {
-  .featured-products {
-    margin-left: auto; /* ยกเลิก 240px */
-    margin-right: auto;
+@media (max-width: 390px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
   }
+
+  .featured-products {
+    padding-top: 1px;
+    max-width: 14%;
+    margin-left: 837px;
+    display: flex;
+    flex-wrap: wrap;       /* ให้รายการขึ้นบรรทัดใหม่ได้ */
+  }
+  
+  .product-card{
+    width: 80px;     
+  }
+
+  .product-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .product-name,
+  .product-price {
+    font-size: 5px;     /* ให้ขนาดยังพอมองเห็นบนมือถือ */
+  }
+
+
 }
 
-@media (max-width: 768px) {
-  .product-list {
-    grid-template-columns: repeat(1, 1fr); /* บนมือถือ แสดง 1 รูปต่อแถว */
-    padding-left: 10px; /* ลด padding ข้างซ้าย */
-    padding-right: 10px; /* ลด padding ข้างขวา */
-  }
-}
+

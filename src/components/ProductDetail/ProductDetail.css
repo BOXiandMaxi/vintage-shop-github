@@ -90,74 +90,70 @@
   margin: 5px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .product-detail-header h1 {
-    font-size: 1.5rem;
+@media (max-width: 390px) {
+  body, html {
+    width: 100vw;  /* กว้างเต็มหน้าจอ */
+    height: auto;  /* ยาวตามเนื้อหา */
+    overflow-x: hidden; /* ป้องกันเลื่อนแนวนอน */
+  }
+  .product-detail-main {
+    display: flex;
+    flex-direction: row;         /* เรียงแนวนอน */
+    justify-content: flex-start; 
+    align-items: flex-start;
+    width: 95%;
+    gap: 10px;
+    margin-left: 45px;
   }
 
-  .product-detail-main {
-    flex-direction: column;
-    align-items: center;
+  .product-detail-header h1 {
+    margin-top: 90px;
+    font-size: 0.6rem;
   }
 
   .product-image-container {
-    max-width: 100%;
-    padding: 15px;
+    width: 45%;                  /* ครึ่งซ้ายของจอ */
+    padding: 10px;
   }
 
   .product-info {
-    max-width: 100%;
-    padding: 15px;
+    max-width: 50%;                /* ครึ่งขวาของจอ */
+    padding: 10px;
   }
 
   .product-detail-image {
-    width: 80%;
-    height: auto;
-    max-height: 250px;
-  }
-
-  .price-text {
-    font-size: 1.2rem;
-  }
-
-  .add-button {
     width: 100%;
-    padding: 12px 20px;
+    height: auto;
+    max-height: 180px;
+  }
+
+  .product-info h1{
+    font-size: 0.5rem;
+  }
+
+  .product-info h2{
+    font-size: 0.5rem;
   }
 
   .product-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .product-info p {
+    font-size: 0.4rem;
+  }
+
+  .product-info li {
+    font-size: 0.8rem;
+  }
+
+  .price-text {
     font-size: 1rem;
   }
 
-  .product-info li {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-detail-header h1 {
-    font-size: 1.2rem;
-  }
-
-  .product-detail-image {
-    width: 100%;
-    max-height: 200px;
-  }
-
-  .price-text {
-    font-size: 1.1rem;
-  }
-
   .add-button {
-    font-size: 14px;
-  }
-
-  .product-info h3 {
-    font-size: 0.9rem;
-  }
-
-  .product-info li {
-    font-size: 0.85rem;
+    width: 35%;
+    padding: 10px;
+    font-size: 0.4rem;
   }
 }

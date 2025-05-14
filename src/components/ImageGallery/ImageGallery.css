@@ -4,9 +4,11 @@
   text-align: center;
   padding: 15px;
   background-color: #f39c12;
-  border-radius: 15px;
+  border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;  /* เพิ่ม width 100% เพื่อให้ container ยืดเต็มพื้นที่ */
+  width: 40vw !important;
+  max-width: 100vw !important;
+  overflow: hidden;  /* เพิ่ม width 100% เพื่อให้ container ยืดเต็มพื้นที่ */
   box-sizing: border-box; /* คำนวณขนาดรวม padding */
 }
 
@@ -14,7 +16,7 @@
 .swiper-slide {
   box-sizing: border-box; /* ✅ แก้ปัญหากล่องขยาย */
   padding: 10px;
-  width: 100%;  /* ถ้าใช้ auto อย่าเซ็ต width แบบ fixed */
+  width: 120%;  /* ถ้าใช้ auto อย่าเซ็ต width แบบ fixed */
   height: 260px;  /* ความสูงเริ่มต้น */
   display: flex;
   justify-content: center;
@@ -43,28 +45,39 @@
   box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
 }
 
-/* รองรับหน้าจอขนาด 768px */
-@media (max-width: 768px) {
-  .swiper-slide {
-    height: 150px; /* ปรับความสูงของ swiper-slide ให้เหมาะสม */
+@media (max-width: 390px) {
+  body, html {
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
   }
 
+  .swiper-slide {
+    width: 100vw;
+    height: auto;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+  
   .swiper-slide-img {
-    border-radius: 6px;
+    width: 100%;
+    height: 65px; /* หรือมากกว่านี้ถ้าต้องการใหญ่กว่านี้ */
+    object-fit: cover;
+    border-radius: 0;
   }
 
   .image-gallery-container {
-    padding: 10px;
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    margin-left: 10px;
+  }
+
+  .swiper-wrapper {
+    max-width: 100%;
   }
 }
 
-/* รองรับหน้าจอขนาด 480px */
-@media (max-width: 480px) {
-  .swiper-slide {
-    height: 120px; /* ปรับความสูงของ swiper-slide ให้เหมาะสม */
-  }
 
-  .swiper-slide-img {
-    border-radius: 5px;
-  }
-}
+
