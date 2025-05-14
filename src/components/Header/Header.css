@@ -194,18 +194,15 @@
   }
 
   .nav ul {
-    flex-direction: row; /* ✅ เปลี่ยนเป็นแนวนอน */
-    flex-wrap: wrap;     /* ✅ ให้ขึ้นบรรทัดใหม่ถ้าคับ */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    gap: 8px;
   }
 
-  .nav li {
-    font-size: 16px;
+  .nav ul li {
+    font-size: 12px;
+    padding: 4px 6px;
   }
-
 
   .search-container {
     width: 90%;
