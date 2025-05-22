@@ -79,7 +79,7 @@ const products = [
 ];
 
 
-const FeaturedProducts = ({ category }) => {
+const FeaturedProducts = ({ category, isInShopPage }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   // ใช้ useEffect เพื่อตรวจสอบการเปลี่ยนแปลงของ category
@@ -97,7 +97,7 @@ const FeaturedProducts = ({ category }) => {
   }, [category]);  // ทุกครั้งที่ category เปลี่ยน, จะรีเฟรชข้อมูลสินค้า
 
   return (
-    <div className="featured-products">
+    <div className={`featured-products ${isInShopPage ? 'in-shop' : 'in-home'}`}>
       <h2 className="section-title">VinTage-TShirt</h2>
       <div className="product-list">
         {filteredProducts.length > 0 ? (

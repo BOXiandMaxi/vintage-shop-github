@@ -59,7 +59,7 @@
 
 /* ----------------------------------------- Responsive for mobile ----------------------------------- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 390px) {
   body, html {
     width: 100vw;  /* กว้างเต็มหน้าจอ */
     height: auto;  /* ยาวตามเนื้อหา */

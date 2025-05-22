@@ -103,6 +103,10 @@
   border-radius: 8px; /* เพิ่มมุมโค้ง */
 }
 
+.content {
+  padding: 100px 20px 20px;
+}
+
 /* Responsive Design for Mobile */
 @media (max-width: 390px) {
   .sidebar {

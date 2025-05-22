@@ -21,7 +21,7 @@ const Home = () => (
     <ImageSlider />
     <ImageSlidermini />
     <Hero />
-    <FeaturedProducts />
+    <FeaturedProducts isInShopPage={false} />
     <About />
   </div>
 );
