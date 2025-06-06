@@ -5,6 +5,7 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-left: 100px;
 }
 
 .product-detail-header h1 {
@@ -30,6 +31,7 @@
   border: 1px solid #ccc;
   padding: 10px;
   box-sizing: border-box;
+  height: 800px;
 }
 
 .product-info {
@@ -42,17 +44,21 @@
 }
 
 .product-detail-image {
-  width: 60%;
-  height: auto;
-  max-width: 100%;
-  max-height: 360px;
+  width: 75%;           /* ขยายความกว้าง */
+  max-height: 480px;    /* เพิ่มความสูงสูงสุด */
   object-fit: cover;
+  margin: 20px auto;    /* ให้มีช่องว่างรอบรูป */
+  display: block;       /* ทำให้ margin auto มีผลกลางจอ */
+  border-radius: 8px;   /* ทำให้ดูไม่ติดขอบมาก */
 }
+
 
 .add-text {
   font-size: 14px;
-  margin-top: 10px;
+  margin: 0px 0; /* ปรับให้น้อยลงจาก 50px */
+  padding: 0;      /* รีเซ็ต padding เผื่อมีติดมา */
   color: #555;
+  line-height: 1.4; /* เสริมถ้าข้อความดูอึดอัดหรือแน่น */
 }
 
 .price-text {

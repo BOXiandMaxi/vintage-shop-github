@@ -1,12 +1,11 @@
 /* ปรับ container */
 .image-gallery-container {
-  margin-top: 20px;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   background-color: #f39c12;
   border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 40vw !important;
+  width: 30vw !important;
   max-width: 100vw !important;
   overflow: hidden;  /* เพิ่ม width 100% เพื่อให้ container ยืดเต็มพื้นที่ */
   box-sizing: border-box; /* คำนวณขนาดรวม padding */
@@ -15,21 +14,24 @@
 /* กล่องรูปแต่ละใบ (ขนาดปรับอัตโนมัติตาม Swiper) */
 .swiper-slide {
   box-sizing: border-box; /* ✅ แก้ปัญหากล่องขยาย */
-  padding: 10px;
-  width: 120%;  /* ถ้าใช้ auto อย่าเซ็ต width แบบ fixed */
-  height: 260px;  /* ความสูงเริ่มต้น */
+  padding: 5px;
+  width: 100%;  /* ถ้าใช้ auto อย่าเซ็ต width แบบ fixed */
+  height: 220px;  /* ความสูงเริ่มต้น */
   display: flex;
   justify-content: center;
   align-items: center;
   background: white;
   border-radius: 15px;
   overflow: hidden;
+  margin-top: px;
+  margin-bottom: 10px;
+  
 }
 
 /* ขนาดภาพ */
 .swiper-slide-img {
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 90%;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -44,6 +46,7 @@
   border: 3px solid #f39c12;
   box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
 }
+
 
 @media (max-width: 390px) {
   body, html {
