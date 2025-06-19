@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ImageGallery from "../ImageGallery/ImageGallery"; // นำเข้า ImageGallery
 import "./ProductDetail.css"; // ใช้สไตล์ของตัวเอง
+import ReactImageMagnify from 'react-image-magnify';
 
 const products = {
   1: {
@@ -208,13 +209,38 @@ function ProductDetail() {
         <h1>{product.name}</h1>
       </div>
 
+      
       <div className="product-detail-main">
         <div className="product-image-container">
-          <img
-            src={selectedImage} 
-            alt={product.name}
-            className="product-detail-image"
-          />
+          <ReactImageMagnify
+              {...{
+                smallImage: {
+                  alt: product.name,
+                  isFluidWidth: false,
+                  width: 400,
+                  height: 500,
+                  src: selectedImage,
+                },
+                largeImage: {
+                  src: selectedImage,
+                  width: 800,
+                  height: 1000,
+                },
+
+                enlargedImagePosition: 'over', // แสดงภาพขยายทับรูปเดิม
+                  lensStyle: {
+                    backgroundColor: 'rgba(0,0,0,.3)',
+                    border: '1px solid #ccc',
+                    borderRadius: '50%',
+                  },
+
+                enlargedImageContainerStyle: { zIndex: 9 
+                },
+                style: {
+                  cursor: 'zoom-in', // ✅ เปลี่ยนเป็นไอคอนแว่นขยาย
+                },
+              }}
+            />
           <h2 className="add-text">Add a Picture</h2>
           <ImageGallery
             images={product.gallery}

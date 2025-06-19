@@ -1,14 +1,20 @@
 /* ปรับ container */
 .image-gallery-container {
   text-align: center;
-  padding: 10px;
-  background-color: #f39c12;
-  border-radius: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30vw !important;
-  max-width: 100vw !important;
-  overflow: hidden;  /* เพิ่ม width 100% เพื่อให้ container ยืดเต็มพื้นที่ */
-  box-sizing: border-box; /* คำนวณขนาดรวม padding */
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* เงาลึกแบบเรียบ */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 0; /* ตัดความมนน่ารัก */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* กล่องรูปแต่ละใบ (ขนาดปรับอัตโนมัติตาม Swiper) */
@@ -20,11 +26,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
   border-radius: 15px;
   overflow: hidden;
-  margin-top: px;
-  margin-bottom: 10px;
+  margin-top: -10px;
+  margin-bottom: 8px;
   
 }
 
@@ -36,6 +41,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin-top: 1px;
 }
 
 .swiper-slide-img:hover {
