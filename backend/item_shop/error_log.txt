@@ -43,3 +43,31 @@ Stack trace:
 #0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
 #1 {main}
   thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:19:31 Europe/Berlin] PHP Warning:  Undefined array key "image_filename" in E:\vintage-shop-github\backend\item_shop\get_products.php on line 44
+[27-Jun-2025 13:37:03 Europe/Berlin] PHP Warning:  Undefined variable $result in E:\vintage-shop-github\backend\item_shop\get_products.php on line 26
+[27-Jun-2025 13:37:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in E:\vintage-shop-github\backend\item_shop\get_products.php:26
+Stack trace:
+#0 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\get_products.php on line 26
+[27-Jun-2025 13:37:03 Europe/Berlin] PHP Warning:  Undefined variable $result in E:\vintage-shop-github\backend\item_shop\get_products.php on line 26
+[27-Jun-2025 13:37:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in E:\vintage-shop-github\backend\item_shop\get_products.php:26
+Stack trace:
+#0 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\get_products.php on line 26
