@@ -1,0 +1,45 @@
+[25-Jun-2025 14:15:43 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:15:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:15:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:17:57 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:18:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:18:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:18:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:18:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47
+[25-Jun-2025 14:18:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'customer_name' in 'field list' in E:\vintage-shop-github\backend\item_shop\submit_order.php:47
+Stack trace:
+#0 E:\vintage-shop-github\backend\item_shop\submit_order.php(47): mysqli->prepare('INSERT INTO ord...')
+#1 {main}
+  thrown in E:\vintage-shop-github\backend\item_shop\submit_order.php on line 47

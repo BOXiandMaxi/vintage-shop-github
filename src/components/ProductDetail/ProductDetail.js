@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ImageGallery from "../ImageGallery/ImageGallery"; // นำเข้า ImageGallery
 import "./ProductDetail.css"; // ใช้สไตล์ของตัวเอง
 import ReactImageMagnify from 'react-image-magnify';
+
 
 const products = {
   1: {
@@ -24,7 +25,7 @@ const products = {
       "/DetailNirvana/nir5.jpg",
     ],
   },
-  1.1: {
+  2: {
     name: "Nirvana Silver",
     image: "/imagestshirt/nirvanasilver.jpg", // รูปหลัก
     price: "55,000THB (USD 460)",
@@ -44,7 +45,7 @@ const products = {
   },
 /////////////////////////////////////////////////////////////////nirvana//////////////////////////////////////////////////////////////////
 
-  2: {
+  3: {
     name: "QueenNews of the World",
     image: "/imagestshirt/Queen.jpg", // รูปหลัก
     price: "8,000 THB (USD 1,300)",
@@ -65,7 +66,7 @@ const products = {
     ],
   },
 ////////////////////////////////////////////////////////////////Queen/////////////////////////////////////////////////////////////////////
-  3:{
+  4:{
     name: "Green Day Dookie",
     image: "/imagestshirt/Green-Day.jpg",
     price: "18,500 THB (USD 549)",
@@ -86,7 +87,7 @@ const products = {
     ],
   },
 
-  3.1:{
+  5:{
     name: "Green Day Kerplunk",
     image: "/imagestshirt/Green-Day-kerplunk-ID3.1.jpg",
     price: "12,000 THB (USD 347)",
@@ -107,7 +108,7 @@ const products = {
     ],
   },
 ////////////////////////////////////////////////////////////////Green Day/////////////////////////////////////////////////////////////////////
-  4:{
+  6:{
     name: "Silverchair",
     image: "/imagestshirt/silverchair.jpg",
     price: "5,000 THB (USD 147)",
@@ -126,7 +127,7 @@ const products = {
     ],
   },
 
-  4.1:{
+  7:{
     name: "SilverchairRed",
     image: "/imagestshirt/silverchairred.jpg",
     price: "6,500 THB (USD 191)",
@@ -147,7 +148,7 @@ const products = {
   },
 ////////////////////////////////////////////////////////////////Silverchair/////////////////////////////////////////////////////////////////////
 
-  5:{
+  8:{
     name: "Alice in Chains",
     image: "/imagestshirt/AliceinChainsid1.jpg",
     price: "25,000 THB (USD 724)",
@@ -169,7 +170,7 @@ const products = {
   },
 ////////////////////////////////////////////////////////////////Alice in Chains/////////////////////////////////////////////////////////////////////
 
-  6:{
+  9:{
     name: "Eminem Shady",
     image: "/imagestshirt/Eminemshadyid6.jpg",
     price: "18,000 THB (USD 521)",
@@ -194,8 +195,9 @@ const products = {
 
 function ProductDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();  // สร้างตัว navigate สำหรับเปลี่ยนหน้า
   const product = products[id];
-  const [selectedImage, setSelectedImage] = useState(product.image); 
+  const [selectedImage, setSelectedImage] = useState(product?.image || ""); 
 
   if (!product) return <p>Product not found.</p>;
 
@@ -203,44 +205,42 @@ function ProductDetail() {
     setSelectedImage(image);
   };
 
+  // ฟังก์ชันกดปุ่ม ซื้อเลย ให้ไปหน้า /checkout/:id
+  const handleBuyNow = () => {
+    navigate(`/checkout/${id}`);
+  };
+
   return (
     <div className="product-detail-container">
-      <div className="product-detail-header">
-        <h1>{product.name}</h1>
-      </div>
-
       
       <div className="product-detail-main">
         <div className="product-image-container">
           <ReactImageMagnify
-              {...{
-                smallImage: {
-                  alt: product.name,
-                  isFluidWidth: false,
-                  width: 400,
-                  height: 500,
-                  src: selectedImage,
-                },
-                largeImage: {
-                  src: selectedImage,
-                  width: 800,
-                  height: 1000,
-                },
-
-                enlargedImagePosition: 'over', // แสดงภาพขยายทับรูปเดิม
-                  lensStyle: {
-                    backgroundColor: 'rgba(0,0,0,.3)',
-                    border: '1px solid #ccc',
-                    borderRadius: '50%',
-                  },
-
-                enlargedImageContainerStyle: { zIndex: 9 
-                },
-                style: {
-                  cursor: 'zoom-in', // ✅ เปลี่ยนเป็นไอคอนแว่นขยาย
-                },
-              }}
-            />
+            {...{
+              smallImage: {
+                alt: product.name,
+                isFluidWidth: false,
+                width: 400,
+                height: 500,
+                src: selectedImage,
+              },
+              largeImage: {
+                src: selectedImage,
+                width: 800,
+                height: 1000,
+              },
+              enlargedImagePosition: 'over',
+              lensStyle: {
+                backgroundColor: 'rgba(0,0,0,.3)',
+                border: '1px solid #ccc',
+                borderRadius: '50%',
+              },
+              enlargedImageContainerStyle: { zIndex: 9 },
+              style: {
+                cursor: 'zoom-in',
+              },
+            }}
+          />
           <h2 className="add-text">Add a Picture</h2>
           <ImageGallery
             images={product.gallery}
@@ -262,8 +262,8 @@ function ProductDetail() {
           </ul>
           <p className="price-text">฿{product.price}</p>
 
-          {/* ปุ่ม "ซื้อเลย" ย้ายมาอยู่ใต้ราคา */}
-          <button className="add-button">ซื้อเลย</button>
+          {/* ปุ่ม "ซื้อเลย" เพิ่ม onClick */}
+          <button className="add-button" onClick={handleBuyNow}>ซื้อเลย</button>
         </div>
       </div>
     </div>

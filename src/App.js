@@ -14,6 +14,8 @@ import Shop from "./pages/shop";
 import "./App.css";
 // เพิ่มเข้าไป
 import SessionLoader from "./components/SessionLoader/SessionLoader";
+import CheckoutPage from "./pages/CheckoutPage";
+import PaymentPage from "./pages/PaymentPage";
 
 
 const Home = () => (
@@ -45,6 +47,8 @@ const App = () => {
             {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/ProductDetail/:id" element={<ProductDetail />} />
             <Route path="/shop/:category" element={<Shop />} />
+            <Route path="/checkout/:id" element={<CheckoutPage />} />
+            <Route path="/payment/:oid" element={<PaymentPage />} />
           </Routes>
         </div>
         </SessionLoader>

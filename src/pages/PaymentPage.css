@@ -1,0 +1,159 @@
+/* ---------- ตัวแปรสี ---------- */
+:root{
+  --primary:   #1d4ed8;   /* น้ำเงินแบรนด์ */
+  --surface:   #ffffff;
+  --border:    #e2e8f0;
+  --text-main: #0f172a;
+  --text-sub:  #475569;
+  --danger:    #e11d48;
+}
+
+/* ---------- พื้นหลังเฉพาะหน้า Payment ---------- */
+.pay-page{
+  background:#f5f7fb;   /* สีที่ต้องการ */
+  min-height:100vh;     /* เติมสูงเต็ม viewport */
+  padding:0;            /* หรือ padding ด้านบน/ล่างตามชอบ */
+}
+
+/* ---------- กล่องหลัก ---------- */
+.pay-container{
+  max-width:960px;
+  margin:120px auto;
+  padding:48px 56px;
+  background:var(--surface);
+  border-radius:20px;
+  box-shadow:0 6px 28px rgba(0,0,0,.08);
+  font-family:"Noto Sans Thai",sans-serif;
+  color:var(--text-main);
+  line-height:1.6;
+}
+
+/* ---------- header ---------- */
+.pay-head{ text-align:center; margin-bottom:48px; }
+.pay-lock{ width:60px; height:40px; opacity:.7; }
+.pay-head h1{ margin:8px 0 4px; font-size:2rem; }
+.pay-sub{ margin:0; color:var(--text-sub); }
+
+/* ---------- สรุปออเดอร์ ---------- */
+.pay-summary h2{
+  font-size:1.35rem; margin-bottom:16px;
+}
+.pay-order-grid{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  row-gap:10px; column-gap:16px;
+  font-size:1.1rem;
+}
+.pay-amount{
+  color:var(--danger);
+  font-weight:700;
+  font-size:1.6rem;
+}
+
+/* ---------- บัญชีธนาคาร ---------- */
+.pay-bank h2{ font-size:1.35rem; margin:40px 0 24px; }
+/* ---------- บัญชีธนาคาร ---------- */
+.bank-cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px;                 /* ระยะห่างระหว่างการ์ดเพิ่มขึ้น */
+  margin-bottom:32px;
+}
+
+/* ขยายการ์ด & padding */
+.bank-card{
+  flex:1 1 300px;           /* เดิม 240px → 300px   (กว้างขึ้น) */
+  display:flex;
+  gap:24px;                 /* ช่องว่างโลโก้-ข้อความกว้างขึ้น */
+  padding:24px 26px;        /* ระยะขอบด้านในเพิ่มขึ้น */
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:#f9fbff;
+}
+
+/* โลโก้ใหญ่ขึ้นเล็กน้อย */
+.bank-logo{
+  width:64px;               /* เดิม 56px → 64px */
+  height:64px;
+  object-fit:contain;
+}
+
+/* ขนาดตัวอักษร */
+.bank-name  { margin:0; font-weight:600; font-size:1.25rem; }
+.bank-acc   { margin:4px 0 6px; letter-spacing:0.6px; font-size:1.15rem; }
+.bank-holder{ margin:0; color:var(--text-sub); font-size:1.05rem; }
+
+.pay-or{ text-align:center; margin-bottom:16px; color:var(--text-sub); }
+.pay-qr{
+  display:block;
+  margin:0 auto;
+  width:260px; height:260px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  object-fit:contain;
+}
+
+/* ---------- footer ---------- */
+.pay-footer{
+  margin-top:48px;
+  text-align:center;
+  color:var(--text-sub);
+  font-size:.95rem;
+}
+.pay-footer a{ color:var(--primary); text-decoration:none; }
+.pay-footer a:hover{ text-decoration:underline; }
+
+/* ---------- loading / error ---------- */
+.pay-loading,
+.pay-error{
+  text-align:center;
+  margin:120px 0;
+  font-size:1.3rem;
+  color:var(--text-sub);
+}
+
+
+.bank-fullimg{
+  display:block;
+  max-width:100%;          /* ยืดเต็มกล่องแต่ไม่เกิน */
+  height:auto;
+  margin:0 auto 32px;      /* ตรงกลาง + เว้นขอบล่าง */
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+/* ───── ฟอร์มอัปโหลดสลิป ───── */
+.pay-slip-form{
+  margin-top:32px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+
+  justify-content: flex-end;
+  padding-right: 240px;
+}
+
+.pay-slip-form input[type="file"]{
+  padding:10px 0;
+}
+
+.btn-upload{
+  background:var(--primary);
+  color:#fff;
+  padding:12px 28px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.btn-upload:hover{ background:#1638b3; }
+
+/* ข้อความหลังอัปโหลด */
+.pay-msg{
+  margin-top:18px;
+  font-size:1.05rem;
+  color:var(--text-sub);
+}
+.pay-msg.ok{ color:#16a34a; }      /* สีเขียวกรณียืนยันแล้ว */
